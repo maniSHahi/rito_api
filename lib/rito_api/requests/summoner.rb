@@ -2,7 +2,7 @@ module RitoApi
 
     module Requests
 
-        class Summoner < Base
+        class Summoner < Basic
 
             def find(ign, ttl = @ttl) # Finds summoner using the summonerName.
                 return make_request(request_url("lol/summoner/v3/summoners/by-name/#{ign}"), ttl)

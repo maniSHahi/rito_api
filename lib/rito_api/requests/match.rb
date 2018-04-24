@@ -2,7 +2,7 @@ module RitoApi
     
     module Requests
         
-        class Match < Base
+        class Match < Basic
             
             def get(matchId, ttl = @ttl)
                 

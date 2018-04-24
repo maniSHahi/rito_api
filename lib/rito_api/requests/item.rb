@@ -2,7 +2,7 @@ module RitoApi
 
     module Requests
         
-        class Item < Base
+        class Item < Basic
             
             def get_icon(id)
                 

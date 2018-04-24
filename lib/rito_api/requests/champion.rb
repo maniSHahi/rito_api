@@ -1,6 +1,6 @@
 module RitoApi
     module Requests
-        class Champion < Base
+        class Champion < Basic
             
             def get_name(id)
                 champNames = {

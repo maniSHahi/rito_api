@@ -4,7 +4,7 @@ module RitoApi
     # Request Module that handles every requests.
     module Requests 
         attr_accessor :region
-        class Base # Every other request class inherits from this class.
+        class Basic # Every other request class inherits from this class.
             
             def initialize(api_key, region, cache_store) # Initializing
                 @api_key = api_key

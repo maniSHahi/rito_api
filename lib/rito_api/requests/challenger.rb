@@ -2,7 +2,7 @@ module RitoApi
    
     module Requests
        
-        class Challenger < Base
+        class Challenger < Basic
             
             def solo_queue(count = 0, ttl = @ttl) # Not passing an argument / passing string (unless string is number)/ 0 => returns all 200 results.
                 payCheck = make_request(request_url("/lol/league/v3/challengerleagues/by-queue/RANKED_SOLO_5x5"), ttl)[:entries]
