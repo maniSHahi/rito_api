@@ -36,7 +36,6 @@ Gem::Specification.new do |spec|
   
   spec.add_runtime_dependency "httparty", "~> 0.16.1"
   spec.add_runtime_dependency 'moneta', '~> 1.0'
-  spec.add_runtime_dependency 'fileutils', '~> 1.0', '>= 1.0.2'
   spec.add_runtime_dependency 'redis', '~> 4.0', '>= 4.0.1'
   
 end
