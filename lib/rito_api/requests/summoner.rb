@@ -1,3 +1,4 @@
+require_relative('basic')
 module RitoApi
 
     module Requests
