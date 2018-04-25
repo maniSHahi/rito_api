@@ -4,25 +4,25 @@ module RitoApi
         
         class Match < Basic
             
-            def get(matchId, ttl = @ttl)
+            def get_match(matchId, ttl = @ttl)
                 
                 return make_request(request_url("lol/match/v3/matches/#{matchId}"), ttl)
                 
             end
             
             def get_bans(matchId, ttl = @ttl)
-                payCheck = get(matchId, ttl)[:teams]
+                payCheck = get_match(matchId, ttl)[:teams]
                 bans = []
                 payCheck.each {|x| bans.push(x[:bans])}
                 return bans
             end
             
             def get_players(matchId, ttl = @ttl)
-                get(matchId, ttl)[:participantIdentities]
+                get_match(matchId, ttl)[:participantIdentities]
             end
             
             def stats(matchId, ttl = @ttl)
-                get(matchId, ttl)[:participants]
+                get_match(matchId, ttl)[:participants]
             end
             
             def player_stats(matchId, championId, ttl = @ttl)

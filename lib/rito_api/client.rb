@@ -40,7 +40,7 @@ module RitoApi
             RitoApi::Requests::Champion.new(@api_key, @region, @cache_store)
         end
         
-        def matches
+        def match
             RitoApi::Requests::Match.new(@api_key, @region, @cache_store)
         end
         
