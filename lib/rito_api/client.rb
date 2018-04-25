@@ -27,6 +27,10 @@ module RitoApi
         def change_region(region) # Changes region after the client is already initialized.
             @region = region
         end
+        
+        def basic
+            RitoApi::Requests::Basic.new(@api_key, @region, @cache_store)
+        end
 
         def summoner # Creates a new instance of summoner class. Used to make request relating to summoner. Check requests/summoner.rb for methods.
             RitoApi::Requests::Summoner.new(@api_key, @region, @cache_store)
