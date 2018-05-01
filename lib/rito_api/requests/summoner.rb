@@ -55,8 +55,8 @@ module RitoApi
                 return rank
             end
             
-            def recent_matches(ign, ttl = @ttl)
-                return make_request(request_url("lol/match/v3/matchlists/by-account/#{find(ign)[:accountId]}/recent"), ttl)
+            def recent_matches(ign, count = 20, ttl = @ttl)
+                return make_request("https://na1.api.riotgames.com/lol/match/v3/matchlists/by-account/#{find(ign)[:accountId]}?endIndex=#{count}&api_key=#{@api_key}", ttl)
             end
             
             def top_positions(ign, ttl = @ttl)
